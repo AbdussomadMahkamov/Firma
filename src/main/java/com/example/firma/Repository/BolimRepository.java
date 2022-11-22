@@ -5,5 +5,6 @@ import com.example.firma.Entity.Firma;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface BolimRepository extends JpaRepository<Bolim, Integer> {
-    boolean existsByNomiAndFirma(String nomi, Firma firma);
+    boolean existsByNomi(String nomi);
+    boolean existsByNomiAndFirma_Id(String nomi, Integer firma_id);
 }
