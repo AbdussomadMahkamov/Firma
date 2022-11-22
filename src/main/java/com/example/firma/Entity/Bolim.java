@@ -16,6 +16,6 @@ public class Bolim {
     private Integer id;
     @Column(nullable = false)
     private String nomi;
-    @OneToOne
+    @ManyToOne
     private Firma firma;
 }
