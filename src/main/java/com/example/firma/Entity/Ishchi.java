@@ -14,10 +14,14 @@ public class Ishchi {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private String nomi;
+    @Column(nullable = false)
+    private String ismi;
+    @Column(nullable = false)
+    private String familya;
+    @Column(nullable = false, unique = true)
     private String telRaqam;
     @OneToOne
     private Manzil manzil;
-    @OneToOne
+    @ManyToOne
     private Bolim bolim;
 }
